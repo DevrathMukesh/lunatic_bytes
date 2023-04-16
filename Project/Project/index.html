@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="canonical" href="https://julich-brain-atlas.de/" />
+    <link rel="shortlink" href="https://julich-brain-atlas.de/" />
+    <meta name="description"
+        content="The human brain atlas including cytoarchitecture, fibre architecture and neurotransmitter receptor densities is open access on the Human Brain Project EBRAINS infrastructure." />
+    <meta property="og:site_name" content="SOUVENIR" />
+    <meta property="og:title" content="SOUVENIR" />
+    <meta property="og:description" content="Exploring Indian places and culture" />
+    <meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SOUVENIR</title>
+    <style>
+        #preloader-overlay,
+        .preloader {
+            display: none
+        }
+
+        body:not(.atlas-element) #preloader-overlay {
+            align-items: center;
+            background-color: #000;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            left: 0;
+            position: fixed;
+            top: 0;
+            transition: opacity .5s linear .1s, transform .5s ease-out .1s, visibility 0s linear .6s;
+            width: 100vw;
+            z-index: 2000
+        }
+
+        body:not(.atlas-element).is-loaded #preloader-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-100%)
+        }
+
+        body:not(.atlas-element) .preloader {
+            display: block;
+            height: 80px;
+            left: calc(50% - 50px);
+            overflow: hidden;
+            position: fixed;
+            top: calc(50% - 50px);
+            transition: opacity .3s linear 0s, visibility 0s linear .5s, transform .5s cubic-bezier(.000, .000, .180, 1.055) 0s;
+            width: 80px;
+            z-index: 2001
+        }
+
+        body:not(.atlas-element).is-loaded .preloader {
+            opacity: 0;
+            visibility: hidden
+        }
+
+        body:not(.atlas-element) .preloader svg-brand-icon {
+            bottom: 1;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0
+        }
+
+        .preloader svg>* {
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-name: wobble;
+            animation-timing-function: cubic-bezier(.000, .000, .180, 1.055);
+            opacity: 0
+        }
+
+        .preloader svg>*:nth-child(1) {
+            transform-origin: 19% 19%
+        }
+
+        .preloader svg>*:nth-child(2) {
+            animation-delay: .1s;
+            transform-origin: 29.5% 29.5%
+        }
+
+        .preloader svg>*:nth-child(3) {
+            animation-delay: .2s;
+            transform-origin: 43% 43%
+        }
+
+        .preloader svg>*:nth-child(4) {
+            animation-delay: .3s;
+            transform-origin: 57% 57%
+        }
+
+        .preloader svg>*:nth-child(5) {
+            animation-delay: .4s;
+            transform-origin: 70.5% 70.5%
+        }
+
+        .preloader svg>*:nth-child(6) {
+            animation-delay: .5s;
+            transform-origin: 81% 81%
+        }
+
+        .preloader svg path {
+            fill: #fff
+        }
+
+        @keyframes wobble {
+            0% {
+                opacity: 0.2;
+                transform: scale(.5);
+            }
+
+            20% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(.5);
+            }
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="/themes/custom/jba/static/themes/custom/jba/static/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"
+        href="/themes/custom/jba/static/assets/favicon//apple-icon-60x60.png.pagespeed.ce.v5_d4vp0af.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="/themes/custom/jba/static/assets/favicon//apple-icon-72x72.png.pagespeed.ce.wbXOB5AbHk.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="/themes/custom/jba/static/assets/favicon//apple-icon-76x76.png.pagespeed.ce.YGfcJR-P0H.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="/themes/custom/jba/static/assets/favicon//apple-icon-114x114.png.pagespeed.ce.3DwdTHw6o3.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="/themes/custom/jba/static/assets/favicon//apple-icon-120x120.png.pagespeed.ce.ZwvqTjZcQC.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="/themes/custom/jba/static/assets/favicon//apple-icon-144x144.png.pagespeed.ce.4LR7n4oCmC.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="/themes/custom/jba/static/assets/favicon//apple-icon-152x152.png.pagespeed.ce.8UTUpp059Q.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="/themes/custom/jba/static/assets/favicon//apple-icon-180x180.png.pagespeed.ce.6GDSWCUTiT.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="/themes/custom/jba/static/assets/favicon//android-icon-192x192.png.pagespeed.ce.GnYLPWk4Mu.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="/themes/custom/jba/static/assets/favicon//favicon-32x32.png.pagespeed.ce.soAp-epeKO.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+        href="/themes/custom/jba/static/assets/favicon//favicon-96x96.png.pagespeed.ce.VuH8rozkoA.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="/themes/custom/jba/static/assets/favicon//favicon-16x16.png.pagespeed.ce.S_3Xk2SgNN.png">
+    <link rel="manifest" href="/themes/custom/jba/static\/assets/favicon//manifest.json">
+    <meta name="msapplication-TileColor" content="#fffffesf">
+    <meta name="msapplication-TileImage" content="/themes/custom/jba/static/assets/favicon//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" media="all" href="style.css" />
+
+
+
+</head>
+
+<body class="theme-dark path-frontpage page-node-type-page">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+        Skip to main content
+    </a>
+
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <div id="preloader-overlay"></div>
+        <div class="preloader">
+            <div class="svg-container svg-logo-icon">
+                <svg width="266" height="264" viewBox="0 0 266 264" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M59.1147 58.6735C91.2 26.8294 97.2583 7.17363 96.0934 4.40353C93.303 3.24653 73.4994 9.25843 41.4122 41.1042C8.96417 73.3083 3.13348 93.045 4.47438 95.4619C6.78128 96.6636 26.6683 90.876 59.1147 58.6735Z"
+                        fill="black" />
+                    <path
+                        d="M90.8593 90.176C41.8133 138.853 5.76363 158.539 0.315971 155.566C-2.80324 150.036 17.0311 114.257 66.0771 65.5802C114.889 17.1348 150.83 -2.59521 156.663 0.271197C159.551 6.0605 139.672 41.7306 90.8593 90.176Z"
+                        fill="black" />
+                    <path
+                        d="M129.519 128.545C64.9989 192.581 24.8653 209.617 20.5005 205.285C16.1355 200.953 33.2993 161.12 97.8199 97.0844C162.341 33.0488 202.475 16.0141 206.84 20.3461C211.205 24.6781 194.04 64.5096 129.519 128.545Z"
+                        fill="black" />
+                    <path
+                        d="M136.48 135.454C71.9595 199.49 54.7958 239.322 59.1606 243.654C63.5255 247.986 103.659 230.951 168.18 166.915C232.7 102.88 249.865 63.0478 245.5 58.7157C241.135 54.3836 201.001 71.4184 136.48 135.454Z"
+                        fill="black" />
+                    <path
+                        d="M175.14 173.824C224.186 125.146 260.235 105.46 265.684 108.434C268.805 113.962 248.97 149.741 199.922 198.419C151.108 246.867 115.169 266.596 109.337 263.728C106.449 257.939 126.328 222.269 175.14 173.824Z"
+                        fill="black" />
+                    <path
+                        d="M169.907 259.597C168.74 256.827 174.798 237.172 206.886 205.325C239.334 173.121 259.221 167.335 261.527 168.538C262.867 170.955 257.036 190.693 224.589 222.896C192.503 254.741 172.698 260.753 169.907 259.597Z"
+                        fill="black" />
+                </svg>
+            </div>
+        </div>
+
+        <header class="header" id="header">
+
+            <a class="brand-link" href="WhatsApp Image 2023-04-15 at 20.56.40.jpg" title="To the home page">
+                <img src="asfd.png" alt="">
+                <div class="svg-container svg-brand-full">
+                </div>
+            </a>
+
+            <a role="button" class="nav-button" aria-label="menu" aria-expanded="false" data-target="mainNav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+
+
+            <nav class="navigation">
+                <div class="navigation-menu">
+
+
+                    <a href="/" class="nav-item nav-link is-active"
+                        data-drupal-link-system-path="&lt;front&gt;">Home</a>
+                    <!--
+                    <div class="nav-item submenu-container has-submenu">
+                        <a href="/atlas" class="nav-link" data-drupal-link-system-path="node/9">Atlas</a>
+                        <div class="submenu-button">
+
+                            <div class="svg-container svg-arrow-down submenu-arrow">
+                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1.70857e-07L5.73903 2.25976e-07L3.81524 5.96591L3.16859 5.96591L1.26097 4.21718e-07L-3.0598e-07 4.76837e-07L2.29561 7L4.68822 7L7 1.70857e-07Z" fill="black"/>
+    </svg>
+                            </div>
+                        </div>
+                        <div class="submenu">
+
+
+                            <a href="/atlas/probabilistic-maps" title="Probabilistic Maps" class="subnav-link" data-drupal-link-system-path="node/10">Probabilistic Maps</a>
+                            <a href="/atlas/bigbrain" title="BigBrain" class="subnav-link" data-drupal-link-system-path="node/11">BigBrain</a>
+                            <a href="/atlas/fibre-architecture" title="Fibre Architecture" class="subnav-link" data-drupal-link-system-path="node/13">Fibre Architecture</a>
+                            <a href="/atlas/neurotransmitter-receptors" title="Neurotransmitter Receptors" class="subnav-link" data-drupal-link-system-path="node/12">Neurotransmitter Receptors</a>
+
+
+                        </div>
+                    </div>
+                -->
+
+                    <a href="/publications" class="nav-item nav-link"
+                        data-drupal-link-system-path="node/63">Publications</a>
+
+                    <div class="nav-item submenu-container has-submenu">
+                        <a href="/team" title="Team" class="nav-link" data-drupal-link-system-path="node/14">Team</a>
+                        <div class="submenu-button">
+
+                            <div class="svg-container svg-arrow-down submenu-arrow">
+                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7 1.70857e-07L5.73903 2.25976e-07L3.81524 5.96591L3.16859 5.96591L1.26097 4.21718e-07L-3.0598e-07 4.76837e-07L2.29561 7L4.68822 7L7 1.70857e-07Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="submenu">
+
+
+                            <a href="/team/prof-dr-med-katrin-amunts" class="subnav-link"
+                                data-drupal-link-system-path="node/21">Our Team</a>
+
+
+                        </div>
+                    </div>
+
+                    <a href="/news" class="nav-item nav-link" data-drupal-link-system-path="news">Hotels</a>
+
+                    <a href="/network" title="Network" class="nav-item nav-link"
+                        data-drupal-link-system-path="node/16">Destinations</a>
+
+                    <a href="/career" title="Career" class="nav-item nav-link"
+                        data-drupal-link-system-path="node/17">Packages</a>
+
+                    <a href="/impact" title="Impact" class="nav-item nav-link"
+                        data-drupal-link-system-path="node/22">Impact</a>
+
+                    <a href="/contact-us" title="Contact Us" class="nav-item nav-link"
+                        data-drupal-link-system-path="node/18">Contact Us</a>
+
+
+                </div>
+            </nav>
+
+
+
+
+
+        </header>
+
+        <div data-drupal-messages-fallback class="hidden"></div>
+
+
+        <a id="main-content" tabindex="-1"></a>
+        <section class="intro is-dark js-intro">
+            <div class="intro__background"></div>
+            <div class="intro__mask"></div>
+            <div class="intro__overlay"></div>
+            <div class="intro__headline fade-in-element">
+
+                <div class="container-fluid" id="welcome-message">
+                    <h1 class="h1 splitted" id="welcome-message-text">
+                    </h1>
+                    <div class="button-container">
+                        <a class="button" href="/atlas" title="View Atlas">
+                            View Offers
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__text">
+                <div class="container-fluid">
+                    <div class="columns is-multiline">
+                        <div
+                            class="column is-10-tablet is-offset-1-tablet is-7-desktop is-offset-0-desktop is-7-widescreen">
+                            <h2 class="intro__text-headline"><i>Welcome to our website, a unique platform that connects
+                                hotels across our beautiful country, offering visitors an immersive experience of its
+                                rich culture, delectable cuisine, and much more.</i>
+
+                            </h2>
+                        </div>
+                        <div
+                            class="column intro__subtext is-8-tablet is-offset-1-tablet is-4-desktop is-offset-1-desktop is-3-widescreen">
+                            <p>There are many websites that provide accomodation facilities, how is our website
+                                different?</p>
+                            <p>In addition to providing accommodation options, our website also showcases the country's
+                                culture, history, and cuisine through various articles, videos, and images. Whether you
+                                are a foodie looking to indulge in some exotic delicacies or a culture enthusiast
+                                interested in learning about ancient traditions and customs, our website has something
+                                for everyone.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-date="16 December 2022"
+                data-title="Nataliia Fedorchenko awarded place in prestigious Max Planck School of Cognition"
+                data-category="  Awards"
+                data-url="/news/2022-12-nataliia-fedorchenko-awarded-place-prestigious-max-planck-school-cognition">
+            </div>
+
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+     
+
+
+
+
+    <section class="content-parallax topSpacing1 bottomSpacing2 is-grey small-spacing">
+        <div class="container-fluid">
+            <div class="columns">
+
+                <div class="column content-parallax-media fade-in-element is-9-tablet is-offset-2-tablet is-6-desktop is-offset-0-desktop is-6-widescreen is-offset-1-widescreen">
+
+                    <div class="image-container media-back js-rellax" data-rellax-speed="-.8" data-rellax-xs-speed="0" data-rellax-mobile-speed="-.2">
+                        <picture>
+
+                            <img src="WhatsApp Image 2023-04-15 at 20.56.40.jpg" ID="xyz"  />
+
+                        </picture>
+
+                    </div>
+
+                    
+                </div>
+
+                <div class="column content-parallax-text is-8-tablet is-offset-2-tablet is-5-desktop is-offset-1-desktop is-4-widescreen">
+                    <h2 class="h3">
+                        ABOUT SOUVENIR!
+
+                    </h2>
+
+                    <p>SOUVENIR is here to make your trip a breathtaking experience, by providing you the taste of what Indian Culture is all about and thus providing you with <strong>  A HOME AWAY FROM HOME</strong>.</p>
+
+                    <p>TO EXPERIENCE THE TASTE OF AUTHENTIC INDIAN CULTURE JOIN US IN YOUR VENTURE TO EXPLORE THE WORLD</p>
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>      <!---- <div class="h4 fact">
+
+                            <span class="count-up js-count-up" data-number="25"></span> Watts
+
+                        </div>--
+                        <p>Indian literature has a long and rich history, with ancient texts like the Vedas,
+                            Mahabharata, and Ramayana still revered and studied today.</p>
+
+
+                    </div>
+                    <div
+                        class="column facts-item fact-small fact--extended fade-in-element is-10-mobile is-6-tablet is-offset-1-tablet is-4-widescreen is-offset-2-widescreen">
+                        <div class="line">
+                            <div class="line-inner"></div>
+                        </div>
+                       <!---- <div class="h4 fact">
+                            
+
+                         --   <span class="count-up js-count-up" data-number="3000"></span> Terabytes
+
+                        </div>-
+                        <p>Indian literature has a long and rich history, with ancient texts like the Vedas,
+                            Mahabharata, and Ramayana still revered and studied today.</p>-->
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="atlas-links">
+        <div class="container-fluid">
+            <div class="columns">
+                <div class="column atlas-links-title has-text-centered topSpacing2 bottomSpacing2">
+                    <h2 class="h2" > Places to explore
+                    </h2>
+                    <h1 id="abc"><i>India is a land of diverse cultures, rich history, and breathtaking natural beauty. There are numerous places in India that can engage and fascinate tourists. Here are some of the top places to explore in India:
+
+                    </i></h1>
+                </div>
+            </div>
+        </div>
+        <div class="atlas-links-container js-atlas-links">
+            <a class="atlas-links-item js-atlas-links-item" href="/atlas/probabilistic-maps" title="">
+                <div class="atlas-links-inner">
+
+                    <div class="background-image-outer">
+                        <div class="background-image-inner">
+                           
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="overlay"></div>
+                    <div class="gradient"></div>
+
+                    <div class="atlas-links-content">
+                        <h3 class="h3 atlas-links-headline"> Taj Mahal
+                        </h3>
+                        <div class="atlas-links-text">
+                            <p>The Epitome of love</p></h3>
+
+                        </div>
+                        <p class="atlas-links-tapinfo">
+                            Tap to learn more
+                        </p>
+                        <div class="atlas-links-arrow">
+                            <img src="taj mehal.png" alt="">
+                                <path d="M33.8504 31L48 16M48 16L33.8504 1M48 16H0" stroke="white" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linejoin="bevel" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="atlas-links-item js-atlas-links-item" href="/atlas/bigbrain" title="">
+                <div class="atlas-links-inner">
+
+                    <div class="background-image-outer">
+                        <div class="background-image-inner">
+                            
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="overlay"></div>
+                    <div class="gradient"></div>
+
+                    <div class="atlas-links-content">
+                        <h3 class="h3 atlas-links-headline"> Amber Fort
+                        </h3>
+                        <div class="atlas-links-text">
+                            <p>The Pink City</p>
+
+                        </div>
+                        <p class="atlas-links-tapinfo">
+                            Tap to learn more
+                        </p>
+                        <div class="atlas-links-arrow">
+                            <img src="amber fort.png" alt="">
+                                <path d="M33.8504 31L48 16M48 16L33.8504 1M48 16H0" stroke="white" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linejoin="bevel" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="atlas-links-item js-atlas-links-item" href="/atlas/fibre-architecture" title="">
+                <div class="atlas-links-inner">
+
+                    <div class="background-image-outer">
+                        <div class="background-image-inner">
+                            <picture>
+                                <source
+                                    srcset="/sites/default/files/styles/width_2560px/public/2022-03/background-pli.webp?itok=z9ImCV3C 1x"
+                                    media="all and (min-width: 1600px)" type="image/webp" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_1616px/public/2022-03/background-pli.webp?itok=OFO6qFe- 1x"
+                                    media="all and (min-width: 1300px)" type="image/webp" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_1360px/public/2022-03/background-pli.webp?itok=NIM3l6Mi 1x"
+                                    media="all and (min-width: 910px)" type="image/webp" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_948px/public/2022-03/background-pli.webp?itok=ZEkWDlr3 1x"
+                                    media="all and (min-width: 720px)" type="image/webp" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_710px/public/2022-03/background-pli.webp?itok=DEfhbi6c 1x, /sites/default/files/styles/width_1420px/public/2022-03/background-pli.webp?itok=SorYwTq1 2x"
+                                    type="image/webp" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_2560px/public/2022-03/background-pli.jpg?itok=z9ImCV3C 1x"
+                                    media="all and (min-width: 1600px)" type="image/jpeg" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_1616px/public/2022-03/background-pli.jpg?itok=OFO6qFe- 1x"
+                                    media="all and (min-width: 1300px)" type="image/jpeg" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_1360px/public/2022-03/background-pli.jpg?itok=NIM3l6Mi 1x"
+                                    media="all and (min-width: 910px)" type="image/jpeg" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_948px/public/2022-03/background-pli.jpg?itok=ZEkWDlr3 1x"
+                                    media="all and (min-width: 720px)" type="image/jpeg" />
+                                <source
+                                    srcset="/sites/default/files/styles/width_710px/public/2022-03/background-pli.jpg?itok=DEfhbi6c 1x, /sites/default/files/styles/width_1420px/public/2022-03/background-pli.jpg?itok=SorYwTq1 2x"
+                                    type="image/jpeg" />
+                                <img src="/sites/default/files/styles/width_1800px/public/2022-03/background-pli.jpg,qitok=22sF5N5T.pagespeed.ce.DZWNPp4bnC.jpg"
+                                    alt="" />
+
+                            </picture>
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="overlay"></div>
+                    <div class="gradient"></div>
+
+                    <div class="atlas-links-content">
+                        <h3 class="h3 atlas-links-headline"> Ladakh 
+                        </h3>
+                        <div class="atlas-links-text">
+                            <p>A Ride to the Top of the World</p>
+
+                        </div>
+                        <p class="atlas-links-tapinfo">
+                            Tap to learn more
+                        </p>
+                        <div class="atlas-links-arrow">
+                            <img src="ladakh.png" alt="">
+                                <path d="M33.8504 31L48 16M48 16L33.8504 1M48 16H0" stroke="white" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linejoin="bevel" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="atlas-links-item js-atlas-links-item" href="/atlas/neurotransmitter-receptors" title="">
+                <div class="atlas-links-inner">
+
+                    <div class="background-image-outer">
+                        <div class="background-image-inner">
+                            
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="overlay"></div>
+                    <div class="gradient"></div>
+
+                    <div class="atlas-links-content">
+                        <h3 class="h3 atlas-links-headline"> Goa
+                        </h3>
+                        <div class="atlas-links-text">
+                            <p>Sun, Sand and Sea</p>
+
+                        </div>
+                        <p class="atlas-links-tapinfo">
+                            Tap to learn more
+                        </p>
+                        <div class="atlas-links-arrow">
+                            <img src="goa.png" alt="">
+                                <path d="M33.8504 31L48 16M48 16L33.8504 1M48 16H0" stroke="white" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linejoin="bevel" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+        <div class="atlas-links-spacer"></div>
+    </section>
+<section>
+    <! ========================  
+    Syed Sahar Ali Raza   	 
+  ========================	!>
+<div id="generic_price_table">   
+    
+<section>
+    <div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+      
+      <div class="pricing-plan">
+        <img src="bronze.jpg" alt="" class="pricing-img">
+        <h2 class="pricing-header">Beginner</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Search Hotels</li>
+          <li class="pricing-features-item">Know details about hotel and book accordingly</li>
+        </ul>
+        <span class="pricing-price">Free</span>
+        <a href="#/" class="pricing-button">Sign up</a>
+      </div>
+      
+      <div class="pricing-plan">
+        <img src="silver.jpg" alt="" class="pricing-img">
+        <h2 class="pricing-header">Silver Subscription</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Gives tour Package in your budget</li>
+          <li class="pricing-features-item">with beginner facilities too</li>
+          <li class="pricing-features-item">Kowledge about whole indian culture of the visiting place</li>
+        </ul>
+        <span class="pricing-price">$150</span>
+        <a href="#/" class="pricing-button is-featured">Free trial</a>
+      </div>
+      
+      <div class="pricing-plan">
+        <img src="gold.jpg" alt="" class="pricing-img">
+        <h2 class="pricing-header">Premium Membership</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">with silver subscription facilities too</li>
+          <li class="pricing-features-item">24/7 service</li>
+        </ul>
+        <span class="pricing-price">$400</span>
+        <a href="#/" class="pricing-button">Free trial</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </section>             
+	<footer>
+    	<a class="bottom_btn" href="#">&copy; MrSahar</a>
+    </footer>
+</div>
+</section>
+    
+
+    
+
+    <section 
+
+
+    </script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var footerBackground = document.querySelector('.footer-image-background');
+            if (footerBackground && footerBackground.dataset.imageUrls) {
+                var images = footerBackground.dataset.imageUrls.split(',')
+                var image = images[Math.floor(Math.random() * images.length)];
+                footerBackground.style.backgroundImage = "url('" + image + "')";
+            }
+        });
+        window.addEventListener('load', function () {
+            document.querySelector('body').classList.add('is-loaded');
+        });
+    </script>
+</body>
+
+</html>
