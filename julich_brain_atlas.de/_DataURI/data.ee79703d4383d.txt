@@ -1,1 +1,0 @@
-chrome-extension://bfcjfegkgdoomgmofhcidoiampnpbdao/allLibs.js
